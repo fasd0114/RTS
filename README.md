@@ -11,6 +11,7 @@
 | **건물 유닛 생산 시스템** | [/Scripts/Buildings](https://github.com/fasd0114/RTS/tree/main/RTS/Assets/Scripts/Buildings) | 유닛 생산 예약 및 큐 시스템 |
 | **건설 시스템** | [BuildManager.cs](https://github.com/fasd0114/RTS/blob/main/RTS/Assets/Scripts/Managers/BuildManager.cs) | 그리드 기반 건물 배치 및 중첩 방지 |
 | **미니맵 시스템** | [Scripts/Minimap](https://github.com/fasd0114/RTS/tree/main/RTS/Assets/Scripts/Minimap) | 오브젝트 아이콘 표시 및 지형 가시화 |
+| **UI 시스템** | [Scripts/UI](https://github.com/fasd0114/RTS/tree/main/RTS/Assets/Scripts/UI)| 이벤트 기반 반응형 UI 시스템 |
 | **유닛 로직** | [/Scripts/Units](https://github.com/fasd0114/RTS/tree/main/RTS/Assets/Scripts/Units) | NavMesh 및 FSM 기반 유닛 로직 |
 | **유닛 다중 선택 및 명령 하달 시스템** | [/UnitSelectionManager.cs](https://github.com/fasd0114/RTS/blob/main/RTS/Assets/Scripts/Managers/UnitSelectionManager.cs) | 선택 유닛 시각화 및 명령 분기 |
 
