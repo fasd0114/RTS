@@ -152,6 +152,8 @@ public class UnitSelectionManager : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (!Physics.Raycast(ray, out var hit)) return;
 
+        var targetFac = hit.collider.GetComponent<FactionComponent>();
+
         foreach (var unit in selectedUnits)
         {
             if (unit.TryGetComponent<SCV>(out var scv))
@@ -163,7 +165,16 @@ public class UnitSelectionManager : MonoBehaviour
             }
             else if (unit.TryGetComponent<Marine>(out var marine))
             {
-                marine.MoveTo(hit.point);
+                if (targetFac != null && targetFac.faction == Faction.Enemy)
+                {
+                    // 적이라면 공격 명령
+                    marine.Attack(hit.collider.gameObject);
+                }
+                else
+                {
+                    // 빈 땅이거나 아군이라면 이동 명령
+                    marine.MoveTo(hit.point)
+                };
             }
         }
     }
